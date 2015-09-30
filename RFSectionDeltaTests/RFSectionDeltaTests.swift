@@ -35,7 +35,7 @@ class RFSectionDeltaTests: XCTestCase {
     func testAddItemsWithNilArray() {
         let newArray  = [1,2,3,4]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: nil, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -49,7 +49,7 @@ class RFSectionDeltaTests: XCTestCase {
     func testAddItemsWithEmptyArray() {
         let newArray  = [1,2,3,4]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: [], toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -63,7 +63,7 @@ class RFSectionDeltaTests: XCTestCase {
     func testRemoveAllItems() {
         let oldArray  = [1,2,3,4]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: nil)
         
         XCTAssertNotNil(delta.removedIndices, "removed indices not nil")
@@ -77,7 +77,7 @@ class RFSectionDeltaTests: XCTestCase {
     func testRemoveAllItemsWithEmptyArray() {
         let oldArray  = [1,2,3,4]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: [])
         
         XCTAssertNotNil(delta.removedIndices, "removed indices not nil")
@@ -92,7 +92,7 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2,3,4]
         let newArray  = [1,2,3,4,5,6]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -108,7 +108,7 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2,3]
         let newArray  = [1,2,4,5,6]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNotNil(delta.removedIndices, "removed indices not nil")
@@ -125,7 +125,7 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2,3]
         let newArray  = [1,2,3]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -140,7 +140,7 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2]
         let newArray  = [2,1]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -158,7 +158,7 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2,3]
         let newArray  = [3,1,2]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -179,7 +179,7 @@ class RFSectionDeltaTests: XCTestCase {
         var oldArray : [Int]?
         var newArray : [Int]?
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -192,7 +192,7 @@ class RFSectionDeltaTests: XCTestCase {
         var oldArray = [Int]()
         var newArray = [Int]()
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -205,7 +205,7 @@ class RFSectionDeltaTests: XCTestCase {
         var oldArray = [Int]()
         var newArray : [Int]?
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -218,7 +218,7 @@ class RFSectionDeltaTests: XCTestCase {
         var oldArray : [Int]?
         var newArray = [Int]()
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.removedIndices, "removed indices nil")
@@ -231,11 +231,11 @@ class RFSectionDeltaTests: XCTestCase {
         let oldArray  = [1,2,3,4]
         let newArray  = [5,1,2,3]
         
-        let section = RFSectionDelta()
+        let section = RFSectionDelta
         let delta = section.generateDelta(fromOldArray: oldArray, toNewArray: newArray)
         
         XCTAssertNil(delta.unchangedIndices, "unchanged indices nil")
-        println("moved \(delta.movedIndexes)")
+        print("moved \(delta.movedIndexes)")
 //        XCTAssert(delta.movedIndexes == nil, "moved indices nil")
         
         XCTAssertNotNil(delta.addedIndices, "added indices")
